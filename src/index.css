@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.Content{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.Content input{
+  width:50%;
+  padding:30px;
+  font-size: 25px;
+  display:block;
+  box-sizing:border-box;
+  border-radius: 0;
+  border:2px solid lightslategray;
+  opacity: 0.92;
+} 
+.Content input:focus{
+  outline: none;
+}
+.container{
+  background-color:rgb(224, 224, 136);
+  width:50%;
+  height:600px;
+  overflow-y: auto;
+  opacity: 0.96;
+}
+hr{
+  border:3px solid lightsalmon;
+}
+.Recipes:last-child>hr{
+  border:none;
+}
+.container h1{
+  text-align: center;
+  letter-spacing: 1px;
+}
+.container img{
+  width:100%;
+}
+.header{
+  font-size: 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  padding:20px 10px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.recipeContainer>li , .steps{
+  font-size:20px;
+  letter-spacing: 1px;
+  line-height: 35px;
+  padding-left:10px;
+  padding-right: 10px;
 }
+.recipeContainer>li{
+  list-style-type: disc;
+}
+.steps{
+  list-style-type: decimal;
+}
+
+body{
+  background-image:url("./yummy-foods.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  //overflow-y: scroll;
+}
+
+@media screen and (max-width:650px){
+  .Content input{
+      width:100%;
+  }
+  .container{
+      width:100%;
+  }
+}
+
